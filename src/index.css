@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+    @apply min-h-screen bg-maindark 
+}
+
+main {
+    @apply min-h-screen flex items-center justify-center
+}
+
+.card {
+    @apply bg-carddark rounded-2xl p-6 mx-5 max-w-[355px]
+}
+
+.image-container {
+    @apply relative cursor-pointer
+}
+
+.hover-image {
+    @apply absolute flex w-full h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0
+     invisible transition-opacity duration-300 before:absolute before:top-0 before:left-0
+     before:w-full before:h-full before:bg-cyan/50 before:-z-10
+}
+
+.image-container:hover .hover-image {
+    @apply visible opacity-100
+}
